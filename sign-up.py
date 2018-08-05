@@ -4,3 +4,5 @@ class SignUP(object):
         self.last_name = last_name
         self.email = email
 
+    def full_name(self):
+        return '{} {}'.format(self.first_name, self.last_name)
