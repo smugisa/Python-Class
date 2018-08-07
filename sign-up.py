@@ -1,10 +1,10 @@
-import re
+from validate_email import validate_email
 
 class SignUP(object):
     users = []
     def __init__(self, first_name, last_name, email):
-        self.first_name = first_name
-        self.last_name = last_name
+        self.first_name = str(first_name)
+        self.last_name = str(last_name)
         self.email = email
 
     def full_name(self):
@@ -18,13 +18,13 @@ class SignUP(object):
 
     @staticmethod
     def validate_email(email):
-        match = re.match('^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$', email)
+        if null:
+            return "Please enter email address"
 
-        if match == None:
-            return "invalid email address"
+        elif validate_email('email') ==True:
+            return "Email is valid"
         
-        else:           
-           return "email is valid" +email
+        else:
+            return "Email is invalid"
 
-
-
+print(SignUP.validate_email('hhhhhhhh'))
