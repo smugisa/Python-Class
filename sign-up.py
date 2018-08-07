@@ -22,5 +22,3 @@ class SignUP(object):
             return "Email is valid"
         else:
             return "Email is invalid"
-
-print(SignUP.validate_email('smugisa3@gmail.com'))
