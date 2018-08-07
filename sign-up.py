@@ -18,13 +18,9 @@ class SignUP(object):
 
     @staticmethod
     def validate_email(email):
-        if null:
-            return "Please enter email address"
-
-        elif validate_email('email') ==True:
+        if validate_email(email):
             return "Email is valid"
-        
         else:
             return "Email is invalid"
 
-print(SignUP.validate_email('hhhhhhhh'))
+print(SignUP.validate_email('smugisa3@gmail.com'))
