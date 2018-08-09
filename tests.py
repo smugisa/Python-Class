@@ -1,16 +1,17 @@
 import unittest
 from sign_up import *
     
-one = SignUP('stephen', 'mugisa', 'smugisa3@gmail.com')
-DB = []
-
+    
 class Tests(unittest.TestCase):
 
+    def setUp(self):
+        self.one = SignUP('stephen', 'mugisa', 'smugisa3@gmail.com')
+
     def test_full_name(self):
-        self.assertEqual(one.full_name(), 'stephen mugisa')
+        self.assertEqual(self.one.full_name(), 'stephen mugisa')
 
     def test_submit(self):
-        SignUP.submit(one)
+        SignUP.submit(self.one)
         self.assertEqual(SignUP.users[0], ['stephen', 'mugisa', 'smugisa3@gmail.com'])
 
     def test_validate_email(self):
