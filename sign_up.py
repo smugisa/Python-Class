@@ -14,7 +14,7 @@ class SignUP(object):
         
         SignUP.users.append([self.first_name, self.last_name, self.email])
         
-        return "Successfully Registered"
+        return "Successfully updated"
 
     @staticmethod
     def validate_email(email):
@@ -22,3 +22,4 @@ class SignUP(object):
             return "Email is valid"
         else:
             return "Email is invalid"
+
